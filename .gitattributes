@@ -1,0 +1,10 @@
+# Normalize text files to LF in the repository; keep binary assets untouched.
+* text=auto eol=lf
+
+# Binary assets: never apply EOL conversion.
+*.db  binary
+*.pkl binary
+*.png binary
+
+# Raw data table: preserve byte-for-byte (no EOL normalization).
+*.csv -text

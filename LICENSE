@@ -1,0 +1,52 @@
+This repository contains two kinds of material under two different licenses.
+
+================================================================================
+1. CODE  (all notebooks, utils.py, and other source files)
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 Leonardo Gripp Bom Amorim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+2. DATA  (data/raw/*.csv and the derived data/processed/weathering.db)
+================================================================================
+
+The petroleum-products data is NOT covered by the MIT license above.
+
+It is derived from the "Environment Canada Crude Oil and Petroleum Product
+Database" (ESTS — Emergencies Science and Technology Section, Environment and
+Climate Change Canada), published on the Open Government Portal:
+https://open.canada.ca/data/en/dataset/53c38f91-35c8-49a6-a437-b311703db8c5
+
+That source dataset is licensed under the Open Government Licence – Canada:
+https://open.canada.ca/en/open-government-licence-canada
+
+`data/raw/` contains the source table as released by ECCC. `data/processed/
+weathering.db` is an adapted / derived version produced by the code in this
+repository. In accordance with the Open Government Licence – Canada:
+
+    Contains information licensed under the Open Government Licence – Canada.
+    Source: Environment and Climate Change Canada (ECCC), Emergencies Science
+    and Technology Section (ESTS) — Crude Oil and Petroleum Product Database.
+
+This repository is not endorsed by or affiliated with ECCC or the Government
+of Canada.

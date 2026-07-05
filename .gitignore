@@ -1,0 +1,27 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- SQLite WAL/SHM sidecars ---
+# The committed database is the checkpointed base file (data/processed/weathering.db).
+# Its transient write-ahead-log sidecars must never be committed.
+*.db-wal
+*.db-shm
+
+# --- Regenerated notebook outputs ---
+# Figures and JSON reports are reproduced by running the notebooks; they are not
+# part of the curated deposit. Remove these lines if you want to ship example outputs.
+figures/
+docs/reports/
+# NB05 cell 2.a writes one report via a path relative to notebooks/ — catch it there too.
+notebooks/docs/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# NOTE: the following ARE shipped and must NOT be ignored (required to reproduce):
+#   data/processed/weathering.db   (prebuilt, scrubbed SQLite database)
+#   data/raw/*.csv                 (raw ECCC ESTS source table)
+#   models/looo_models/**/*.pkl    (pinned per-fold models, ~133 MB)
