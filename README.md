@@ -10,11 +10,13 @@ Deposited analysis code for **Paper B** of the TCC by **Leonardo Gripp Bom Amori
 ## Overview
 
 This repository contains the analysis pipeline behind the paper. Using the
-[ECCC ESTS](#data-provenance) petroleum-products dataset (45 oils, 180 samples across four
-evaporative weathering stages **W0–W3**), it:
+[ECCC ESTS](#data-provenance) petroleum-products dataset — 44 oils in the primary
+mixed-type cohort and 29 in a crude-only sensitivity cohort, each sampled across four
+evaporative weathering stages **W0–W3** (62 oils enter the exploratory analysis) — it:
 
-1. extracts compound concentrations and derives ~130 diagnostic ratios from the raw table
-   (notebooks `00`–`02`);
+1. extracts compound concentrations and derives 108 diagnostic ratios from the raw table
+   (notebooks `00`–`02`); the collinearity filter then retains 142 features for the
+   mixed-type cohort and 127 for the crude-only cohort;
 2. performs exploratory geochemical analysis by domain (notebooks `03*`);
 3. trains **XGBoost** and baseline models to estimate the weathering stage under
    **leave-one-oil-out (LOOO)** cross-validation (`04`);
