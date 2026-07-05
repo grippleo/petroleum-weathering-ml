@@ -2,8 +2,12 @@
 # Create with:  conda env create -f environment.yml
 # Then:         conda activate tcc-weathering
 #
-# Pins reflect the environment under which the shipped database and models were
-# validated (NB06 reproduces shap_hierarchy at rtol=1e-9). numpy is held < 2.
+# Pins reflect the exact environment under which the shipped database and models
+# were validated (NB06 reproduces shap_hierarchy at rtol=1e-9). numpy is held < 2.
+#
+# The split below mirrors how that environment was actually built: the base
+# scientific stack from conda-forge, and scipy/matplotlib/xgboost/optuna/networkx
+# via pip (those exact pinned versions are not on conda-forge for this platform).
 name: tcc-weathering
 channels:
   - conda-forge
@@ -11,18 +15,20 @@ dependencies:
   - python=3.10
   - numpy=1.26.4
   - pandas=2.3.3
-  - scipy=1.15.3
   - scikit-learn=1.7.2
-  - xgboost=3.2.0
-  - optuna=3.5.0
-  - matplotlib=3.9.4
   - seaborn=0.13.2
   - statsmodels=0.14.6
-  - networkx=3.4.2
   - jupyterlab
+  - pip
+  - pip:
+      - scipy==1.15.3
+      - matplotlib==3.9.4
+      - xgboost==3.2.0
+      - optuna==3.5.0
+      - networkx==3.4.2
 # Notes:
 #   - The `shap` package is NOT required: TreeSHAP values are computed via xgboost's
-#     native `predict(..., pred_contribs=True)`, which sidesteps a shap 0.44.1 /
+#     native `predict(..., pred_contribs=True)`, sidestepping a shap 0.44.1 /
 #     xgboost 2.x serialization incompatibility.
-#   - `firthlogist` and `patsy` are intentionally absent (the selection-bias diagnostic
+#   - `firthlogist` / `patsy` are intentionally absent (the selection-bias diagnostic
 #     that used them is out of scope for this deposit).
