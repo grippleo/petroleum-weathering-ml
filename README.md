@@ -1,7 +1,6 @@
 # Interpretable machine learning for cross-source estimation of petroleum weathering stage
 
-Deposited analysis code for **Paper B** of the TCC by **Leonardo Gripp Bom Amorim**
-(UNICAMP).
+Deposited analysis code for **Paper** by **Leonardo Gripp Bom Amorim**.
 
 > **Author to finalize:** exact paper title, citation, and author/affiliation list.
 
@@ -114,5 +113,5 @@ Two licenses apply — see [`LICENSE`](LICENSE) for full text.
 
 ## Citation
 
-*Author to finalize.* Please cite the associated paper (Leonardo Gripp Bom Amorim,
-UNICAMP). A full citation / DOI will be added here on publication.
+*Author to finalize.* Please cite the associated paper (Leonardo Gripp Bom Amorim). 
+A full citation / DOI will be added here on publication.
