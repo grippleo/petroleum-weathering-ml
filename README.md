@@ -4,6 +4,13 @@ Deposited analysis code for **Paper** by **Leonardo Gripp Bom Amorim**.
 
 > **Author to finalize:** exact paper title, citation, and author/affiliation list.
 
+**Development and tooling note.** This repository was developed by the author.
+Claude Code (Anthropic) was used as a coding assistant and as the mechanism
+for applying and committing changes to the repository; commits co-authored by
+the `claude` identity in the history reflect this tooling, not independent
+authorship. All methodological, analytical, and interpretive decisions are
+the author's own.
+
 ---
 
 ## Overview
